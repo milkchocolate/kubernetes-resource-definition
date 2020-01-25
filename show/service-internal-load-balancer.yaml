@@ -1,0 +1,12 @@
+# Create an External Load Balancer
+apiVersion: v1
+kind: Service
+metadata:
+  name: show-service-internal-load-balancer
+spec:
+  selector:
+    app: show
+  ports:
+    - port: 9090
+      targetPort: 8080  
+  type: ClusterIP

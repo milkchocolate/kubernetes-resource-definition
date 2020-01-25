@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: show-deployment
+  labels:
+    app: show
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: show
+  template:
+    metadata:
+      labels:
+        app: show
+    spec:
+      containers:
+        - name: show
+          image: aaronyunan/show:latest
+          ports:
+            - containerPort: 8080

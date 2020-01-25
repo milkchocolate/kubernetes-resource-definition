@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tool-deployment
+  labels:
+    app: tool
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tool
+  template:
+    metadata:
+      labels:
+        app: tool
+    spec:
+      containers:
+        - name: tool
+          image: ubuntu:latest
+          command: ["sleep"]
+          args: ["infinity"]
