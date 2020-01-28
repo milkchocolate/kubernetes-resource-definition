@@ -1,0 +1,23 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: dojob-cron-job
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: dojob
+            image: aaronyunan/dojob:latest
+            imagePullPolicy: Always
+            # args:
+            # - /bin/sh
+            # - -c
+            # - date; echo Hello from the Kubernetes cluster
+            env:
+            - name: ITEM_URL
+              value: http://show-service-internal-load-balancer:9090/items?names=HOSTNAME
+          restartPolicy: OnFailure
+          
