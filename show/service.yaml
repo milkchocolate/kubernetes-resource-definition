@@ -1,8 +1,9 @@
-# Create an External Load Balancer
+# Create an Internal Load Balancer
 apiVersion: v1
 kind: Service
 metadata:
-  name: show-service-internal-load-balancer
+  name: show-service
+  namespace: mad
 spec:
   selector:
     app: show

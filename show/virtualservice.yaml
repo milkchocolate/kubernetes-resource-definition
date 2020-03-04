@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: show-virutal-service
+  namespace: mad
+spec:
+  hosts:
+    - "show-service"
+  http:
+    - route:
+        - destination:
+            host: show-service
+            subset: v1
+      retries:
+        attempts: 3
+        perTryTimeout: 2s

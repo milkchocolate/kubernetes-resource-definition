@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: tool-deployment
+  namespace: mad
   labels:
     app: tool
 spec:
