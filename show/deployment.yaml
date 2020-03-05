@@ -7,7 +7,7 @@ metadata:
     app: show
     version: v1
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: show
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: show
-          image: aaronyunan/show:3
+          image: aaronyunan/show:5
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
