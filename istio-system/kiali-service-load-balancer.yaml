@@ -1,13 +1,12 @@
-# Create an External Load Balancer
 apiVersion: v1
 kind: Service
 metadata:
   name: kiali-service-load-balancer
   namespace: istio-system
 spec:
+  type: LoadBalancer
   selector:
-    app: kiali
+      app: kiali
   ports:
     - port: 11002
-      targetPort: 20001  
-  type: LoadBalancer
+      targetPort: 20001

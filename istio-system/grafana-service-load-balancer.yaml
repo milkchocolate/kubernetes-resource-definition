@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana-service-load-balancer
+  namespace: istio-system
+spec:
+  type: LoadBalancer
+  selector:
+      app: grafana
+  ports:
+    - port: 11003
+      targetPort: 3000
