@@ -11,7 +11,7 @@ spec:
         spec:
           containers:
           - name: dojob
-            image: aaronyunan/dojob:latest
+            image: aaronyunan/dojob:4
             imagePullPolicy: Always
             # args:
             # - /bin/sh

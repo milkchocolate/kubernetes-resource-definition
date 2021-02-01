@@ -5,11 +5,11 @@ metadata:
   namespace: mad
 spec:
   hosts:
-    - "show-service"
+    - "show-service-cluster-ip"
   http:
     - route:
         - destination:
-            host: show-service
+            host: show-service-cluster-ip
             subset: v1
       retries:
         attempts: 3

@@ -4,7 +4,7 @@ metadata:
   name: show-destination-rule
   namespace: mad
 spec:
-  host: show-service
+  host: show-service-cluster-ip
   subsets:
     - labels:
         version: v1

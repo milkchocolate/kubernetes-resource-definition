@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: show
-          image: aaronyunan/show:5
+          image: aaronyunan/show:12
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
