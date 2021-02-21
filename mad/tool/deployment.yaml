@@ -15,6 +15,7 @@ spec:
       labels:
         app: tool
     spec:
+      serviceAccountName: internal-app
       containers:
         - name: tool
           image: ubuntu:latest
